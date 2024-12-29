@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio Resume Builder</h1>
+        
+        <!-- Form Section -->
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="John Doe" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="johndoe@example.com" required><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="(123) 456-7890" required><br>
+
+            <label for="summary">Summary:</label>
+            <textarea id="summary" placeholder="Write a brief summary about yourself" required></textarea><br>
+
+            <h2>Work Experience</h2>
+            <div id="work-experience">
+                <div class="work-entry">
+                    <input type="text" class="job-title" placeholder="Job Title" required><br>
+                    <input type="text" class="company-name" placeholder="Company Name" required><br>
+                    <textarea class="job-description" placeholder="Job Description"></textarea><br>
+                </div>
+            </div>
+            <button type="button" id="add-work">Add Work Experience</button>
+
+            <h2>Skills</h2>
+            <input type="text" id="skills" placeholder="e.g. JavaScript, HTML, CSS" required><br>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <hr>
+
+        <!-- Resume Preview Section -->
+        <div id="resume-preview" class="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="resume-content"></div>
+            <button id="download-btn" style="display:none;">Download Resume</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
